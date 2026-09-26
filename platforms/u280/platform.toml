@@ -1,5 +1,6 @@
 # AMD Alveo U280. Vitis shell xilinx_u280_gen3x16_xdma_1_202211_1.
 # check the shell against your installed card: xbutil examine / platforminfo -l
+# plain Vivado (no shell) is possible too, see README "vivado only"
 
 [platform]
 name = "AMD Alveo U280"

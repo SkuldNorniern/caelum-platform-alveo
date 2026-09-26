@@ -1,5 +1,6 @@
 # AMD Alveo U55C. Vitis shell xilinx_u55c_gen3x16_xdma_3_202210_1.
 # check the shell against your installed card: xbutil examine / platforminfo -l
+# plain Vivado (no shell) is possible too, see README "vivado only"
 
 [platform]
 name = "AMD Alveo U55C"
