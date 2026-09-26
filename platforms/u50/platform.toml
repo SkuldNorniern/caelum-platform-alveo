@@ -1,0 +1,16 @@
+# AMD Alveo U50. Vitis shell xilinx_u50_gen3x16_xdma_5_202210_1.
+# check the shell against your installed card: xbutil examine / platforminfo -l
+
+[platform]
+name = "AMD Alveo U50"
+part = "xcu50-fsvh2104-2-e"
+modes = ["hw_emu", "hw"]
+requires = ["xclbin", "xrt-host"]
+
+[env]
+VITIS_PLATFORM = "xilinx_u50_gen3x16_xdma_5_202210_1"
+
+# memory the kernel can reach (for connectivity: sp=<kernel>.<port>:HBM[a:b] / DDR[n] / PLRAM[n])
+[memory]
+hbm = { size_gb = 8, pseudo_channels = 32 }
+plram = { banks = 3 }

@@ -1,0 +1,16 @@
+# AMD Alveo U55C. Vitis shell xilinx_u55c_gen3x16_xdma_3_202210_1.
+# check the shell against your installed card: xbutil examine / platforminfo -l
+
+[platform]
+name = "AMD Alveo U55C"
+part = "xcu55c-fsvh2892-2L-e"
+modes = ["hw_emu", "hw"]
+requires = ["xclbin", "xrt-host"]
+
+[env]
+VITIS_PLATFORM = "xilinx_u55c_gen3x16_xdma_3_202210_1"
+
+# memory the kernel can reach (for connectivity: sp=<kernel>.<port>:HBM[a:b] / DDR[n] / PLRAM[n])
+[memory]
+hbm = { size_gb = 16, pseudo_channels = 32 }
+plram = { banks = 3 }

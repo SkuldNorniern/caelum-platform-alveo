@@ -1,0 +1,17 @@
+# AMD Alveo U280. Vitis shell xilinx_u280_gen3x16_xdma_1_202211_1.
+# check the shell against your installed card: xbutil examine / platforminfo -l
+
+[platform]
+name = "AMD Alveo U280"
+part = "xcu280-fsvh2892-2L-e"
+modes = ["hw_emu", "hw"]
+requires = ["xclbin", "xrt-host"]
+
+[env]
+VITIS_PLATFORM = "xilinx_u280_gen3x16_xdma_1_202211_1"
+
+# memory the kernel can reach (for connectivity: sp=<kernel>.<port>:HBM[a:b] / DDR[n] / PLRAM[n])
+[memory]
+hbm = { size_gb = 8, pseudo_channels = 32 }
+ddr = { banks = 2, size_gb = 32 }
+plram = { banks = 3 }
