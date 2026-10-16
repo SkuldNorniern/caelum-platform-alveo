@@ -16,6 +16,10 @@ platform = "alveo::u50"
 
 older shell on your card: override `VITIS_PLATFORM` in a copy of the platform. kernel.xml and the connectivity cfg stay in the project.
 
+## host programs
+
+C++ hosts with XRT are built by [caelum-target-vitis](https://github.com/SkuldNorniern/caelum-target-vitis) (`host = "host/main.cpp"`). Rust hosts (`caelum::host`) need its `xrt` backend, which isn't there yet; these platforms will name it in a `[host]` table once it is.
+
 ## vivado only
 
 the cards also run a plain Vivado bitstream (no shell, no XRT, JTAG). these platforms don't cover that yet, use the part directly:
